@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+@media (min-width:1200px) {
+    *{
+        font-size: calc(16 * (100vw / 1200));
+    }
+}
+body{
+    background: #000;
+    color: #fff;
+    
+}
+.movie {
+    margin: 0 auto;
+}
+.movie__body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.movie-box{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem 1.25rem;
+}
+.movie__img {
+    flex: 1 0 66.01vw;
+    height: 69.53vh;
+}
+.movie__img img{
+    display: none;
+}
+.movie__button {
+    flex: 1 0 30.42vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 69.53vh;
+    padding-left: 1.875rem;
+
+}
+.button-muvie{
+    flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-bottom: 0.430rem solid #fff;
+}
+.button-muvie__name {
+    font-family: 'Lalezar' ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 120%;
+    text-align: right;
+    display: block;
+    color: #FFFFFF;
+}
+.button-muvie__year {
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 120%;
+    text-align: right;
+    display: block;
+    color: #FFFFFF;
+}
+.movie__header {
+    padding: 3.125rem 1.25rem 0 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header-movie {
+}
+.movie__life{
+   
+}
+.movie__life img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+@media (max-width:960px) and (min-height:520px){
+    .movie-box{
+        flex-direction: column;
+    }
+    .movie__img {
+        flex: 0 1 50vw;
+        width: 100%;
+        min-height: 40vh;
+        margin-top: 15px;
+    }
+    .movie__button{
+        padding: 20px 0 ;
+        height: 50vh;
+        width: 100%;
+    }
+    .movie__header{
+        padding-top: 30px;
+    }
+    *{
+        font-size: 16px;
+    }
+}
+@media (max-width:560px) {
+    .movie__header{
+        padding-top: 15px;
+    }
+    *{
+        font-size: 12px;
+    }
+}
+@media (max-width:960px) and (max-height:520px) {
+    .movie__header{
+        padding-top: 15px;
+    }
+    *{
+        font-size: 12px;
+    }
+}
+.movie__life{
+    color: rgb(214, 18, 18);
+    font-size: 24px;
+}
+.header-movie__timer {
+    display: inline-block;
+    min-width: calc(100%);
+
+}
+.timer-header {
+    margin-top: 0.625rem;
+    
+}
+
+.timer-header__line{
+   
+    height: 0.625rem;
+    background: #fff;
+    animation: line15s linear;
+    
+}
+@keyframes line{
+    0%{width: 100%; }
+    100%{width: 0%; }
+}
+
+.header-movie__info {
+    display: flex;
+}
+.info-movie {
+}
+.info-movie__score {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+.info-movie__score span{
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    text-align: right;
+    
+    color: #FFFFFF;
+}
+.info-movie__help img{
+    width: 1.875rem;
+    height: 2.5rem;
+}
+
+.movie__burger {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    transition: all 0.4s;
+}
+
+
+
+.movie__burger.action{
+    transform: translateX(-50%) rotate(180deg);
+}
+
+
+
+/*-------------------- MENU PAGE ------------------*/
+
+.wrapper {
+    background: url('/img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    
+    position: relative;
+}
+.header {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.header__user {
+    display: flex;
+}
+.header__user img{
+    width: 3rem;
+    height: 3rem;
+}
+.user-header {
+}
+.user-header__add {
+}
+.user-header__sign {
+    margin-left: 2.5rem;
+}
+.menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu__list {
+}
+.menu__link {
+    list-style: none;
+    color: #fff;
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 120%;
+}
+
+@media (max-width:769px) {
+    .header {
+        top: 20px;
+        right: 20px;
+        
+    }
+    .menu__link {
+        font-size: 64px;
+        text-align: center;
+    }
+    .header__user img{
+        width: 40px;
+        height: 40px;
+    }
+    .user-header__sign {
+        margin-left: 20px;
+    }
+}
