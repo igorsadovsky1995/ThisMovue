@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/style_edit.css"> -->
+    <link rel="stylesheet" href="css/style_edit_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container_main">
+        <div class="section1">
+            <div class="film_edit">
+                <div class="title">
+                    <h1>Edit</h1>
+                    <div class="form-floating mb-3 film_name_change">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3 film_year_change">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Year</label>
+                    </div>
+                </div>
+                <div class="genre">
+                    <h1>Genre</h1>
+                    <div class="genre_holder">
+                        <div class="genre_select_form genre_form">
+                            <select class="form-select form-select-lg mb-3 genre_select"
+                                aria-label=".form-select-lg example">
+                                <option selected>Select genre</option>
+                                <option value="1">Comedy</option>
+                                <option value="2">Triller</option>
+                                <option value="3">Romantic</option>
+                            </select>
+                            <button type="button" class="btn btn-primary add_genre_button"><i
+                                    class="fa-solid fa-plus"></i></button>
+                            <!-- <button type="button" class="btn btn-danger remove_genre_button2"> <i
+                                class="fa-solid fa-minus"></i></button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div class="similar_films">
+                <div class="section_sf_title">
+                    <h1>Similar films</h1>
+                    <button type="button" class="btn btn-primary add_similar_button"><i
+                            class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="similar_film_holders_container">
+                    <div class="film_holder film">
+                        <label for="floatingInput">Name</label>
+                        <div class="form_atribute">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="film name">
+                            <button type="button" class="btn btn-danger remove_simfilm_button delete_sfilm_btn"> <i
+                                    class="fa-solid fa-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="section3_title">
+                <h1>Img picker</h1>
+                <button type="button" class="btn btn-primary add_img_button"><i
+                    class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="img_container">
+
+                <div class="img_place_holder">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">select the photo</label>
+                    </div>
+                    <div class="img_holder">
+                        <img src="img/img_uploud.jpg" alt="">
+                    </div>
+                </div>
+                
+                <div class="img_place_holder">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">select the photo</label>
+                    </div>
+                    <div class="img_holder">
+                        <img src="img/img_uploud.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="img_place_holder">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">select the photo</label>
+                    </div>
+                    <div class="img_holder">
+                        <img src="img/img_uploud.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="img_place_holder">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">select the photo</label>
+                    </div>
+                    <div class="img_holder">
+                        <img src="img/img_uploud.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="img_place_holder">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">select the photo</label>
+                    </div>
+                    <div class="img_holder">
+                        <img src="img/img_uploud.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="img_place_holder">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">select the photo</label>
+                    </div>
+                    <div class="img_holder">
+                        <img src="img/img_uploud.jpg" alt="">
+                    </div>
+                </div>
+
+                
+
+
+
+
+
+            </div>
+            <div class="save_changes_btn">
+                <button type="button" class="btn btn-success btn-save-change">Save change</button></div>
+        </div>
+    </div>
+    <!-- <script src="js/script_edit_page.js"></script> -->
+    <script src="js/sript_edit_page.js"></script>
+    <script src="https://kit.fontawesome.com/44ca097343.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
