@@ -316,7 +316,7 @@ body {
 
 /*-------------------- MENU PAGE ------------------*/
 .wrapper {
-  background: url("/img/bg.jpg");
+  background: url("../img/bg.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -341,13 +341,8 @@ body {
   display: flex;
 }
 
-.header__user img {
-  width: 3rem;
-  height: 3rem;
-}
-
 .user-header__sign {
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
 }
 
 .menu {
@@ -364,7 +359,19 @@ body {
           align-items: center;
 }
 
-.menu__link {
+.user-header__sign-svg {
+  width: 3.25rem;
+  height: 2.5rem;
+  fill: white;
+}
+
+.user-header__add-svg {
+  width: 3.125rem;
+  height: 2.5rem;
+  fill: white;
+}
+
+.menu__link a {
   list-style: none;
   color: #fff;
   font-family: 'Lalezar';
@@ -372,6 +379,7 @@ body {
   font-weight: 400;
   font-size: 5rem;
   line-height: 120%;
+  text-decoration: none;
 }
 
 @media (max-width: 769px) {
@@ -380,10 +388,15 @@ body {
     right: 20px;
   }
   .menu__link {
+    list-style: none;
     font-size: 64px;
     text-align: center;
   }
-  .header__user img {
+  .user-header__sign-svg {
+    width: 40px;
+    height: 40px;
+  }
+  .user-header__add-svg {
     width: 40px;
     height: 40px;
   }
