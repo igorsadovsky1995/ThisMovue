@@ -15,5 +15,39 @@ $(document).ready(function(){
     }
     setTimeout(timer,1000);
 
+
+    let count=0;
+    
+    $('.setting-menu__button-prev').click(function (){
+
+        $('.setting-menu__col').hide()
+        count = count < 0 ? $('.setting-menu__col').length-2 : count-1;;
+
+        $('.setting-menu__col').eq(count).show();
+    })
+
+    $('.setting-menu__button-next').click(function(){
+        $('.col-setting__sub').hide()
+        count = count > $('.col-setting__sub').length-2 ? 0:count+1;
+        
+        $('.col-setting__sub').eq(count).show();
+    })
+
+    $('.setting-menu__item').click(function(){
+        $('.setting-menu__item').removeClass('open')
+        $('.setting-menu__col').removeClass('open')
+        $('.setting-menu__col').eq($(this).index()).addClass('open')
+        $(this).addClass('open')
+        $(this).hasClass('leng') ? $('.setting-menu__button').hide():$('.setting-menu__button').show()
+    })
+
+    $('.col-setting__button').click(function(){
+        $('.col-setting__sub').removeClass('active')
+        $(this).parents('.col-setting__sub').addClass('active')
+    })
+    $('.leng-setting__item').click(function(){
+        $('.leng-setting__item').removeClass('active')
+        $(this).addClass('active')
+    })
 })
 
