@@ -258,9 +258,9 @@ body{
 }
 .header {
     position: absolute;
-    top: 5rem;
-    right: 5rem;
-    width: 100%;
+    top: 2.5rem;
+    right: 1.875rem;
+    width: calc(100% - 3.75rem);
     display: flex;
     justify-content: flex-end;
 }
@@ -361,13 +361,35 @@ body{
 }
 
 /*------------------ SETTING-PAGE ------------------*/
+.header{
+    display: flex;
+    align-items: center;
+}
+.header__arrow{
+    margin-right: auto;
+}
+.arrow-header__svg{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.header__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 130%;
+    color: #FFFFFF;
+}
 .wrapper.setting{
     justify-content: flex-start;
     align-items: flex-start;
     overflow: hidden;
 }
 .setting-menu {
-    margin-top: 8.7rem;
+    margin-top: 7.5rem;
     
 }
 .setting-menu__body {
@@ -386,7 +408,7 @@ body{
     font-weight: 400;
     font-size: 3rem;
     line-height: 120%;
-
+    cursor: pointer;
     color: #FFFFFF;
 }
 .setting-menu__item.open{
@@ -426,9 +448,7 @@ body{
     font-weight: 400;
     font-size: 2.25rem;
     line-height: 120%;
-    /* identical to box height */
-
-
+    cursor: pointer;
     color: #FFFFFF;
 }
 .leng-setting__item.active{
@@ -483,7 +503,7 @@ body{
     transform: translateX(-50%);
     border: none;
     background: none;
-
+    cursor: pointer;
     font-family: 'Lalezar';
     font-style: normal;
     font-weight: 400;
@@ -496,9 +516,12 @@ body{
     display: none;
 }
 @media (max-width:960px) {
+    .header__title {
+        font-size: 36px;
+    }
     .header {
-        top: 2.5rem;
-        right: 2.5rem;
+        top: 1.5rem;
+        right: 1.25rem;
     }
     .setting-menu {
         margin-top: 5.5rem;
@@ -592,7 +615,9 @@ body{
     
 }
 @media (max-width:560px) {
-    
+    .header__title {
+        display: none;
+    }
     .setting-menu__body {
         width: 100vw;
         display: flex;
