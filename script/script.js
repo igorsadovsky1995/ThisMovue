@@ -43,11 +43,20 @@ $(document).ready(function(){
 
     $('.col-setting__button').click(function(){
         $('.col-setting__sub').removeClass('active')
-        $(this).parents('.col-setting__sub').addClass('active')
-    })
+        array.mode=$(this).parents('.col-setting__sub').index()
+        
+        $('.col-setting__sub').eq(array.mode).addClass('active')
+       
+        })
     $('.leng-setting__item').click(function(){
         $('.leng-setting__item').removeClass('active')
-        $(this).addClass('active')
+        array.lang=$(this).index();
+        
+        $('.leng-setting__item').eq(array.lang).addClass('active')
+        
     })
+   
+
+   
 })
 
