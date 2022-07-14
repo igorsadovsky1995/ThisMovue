@@ -18,6 +18,14 @@ $(document).ready(function(){
 
     let count=0;
     
+    function load(){
+        $('.leng-setting__item').removeClass('active');
+        $('.col-setting__sub').removeClass('active')
+        $('.leng-setting__item').eq(array.lang).addClass('active')
+        $('.col-setting__sub').eq(array.mode).addClass('active')
+    }
+    load();
+
     $('.setting-menu__button-prev').click(function (){
 
         $('.setting-menu__col').hide()
