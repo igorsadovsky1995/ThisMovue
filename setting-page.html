@@ -138,12 +138,23 @@
     </div>
     <script src="script/jquery-3.6.0.min.js"></script>
     <script>
-         let array={
+        /*------------------ ИНдексы актывных кнопок при включении (настройки игры)--------------*/
+        let array={
             mode:2,
             lang:1
         };
-        
+        /*-------------------------------------------------------------------------*/
 
+        /*----------------- Беру индекс измененных активной кнопки (настройки игры) --------------*/
+        //mode
+        $('.col-setting__button').click(function(){
+            array.mode = $(this).parents().index();
+        })
+        //lang
+        $('.leng-setting__item').click(function(){
+            array.lang = $(this).index();
+        })
+        /*-------------------------------------------------------------------------*/
     </script>
     <script src="script/script.js"></script>
     <script src="https://kit.fontawesome.com/eb89a4f593.js" crossorigin="anonymous"></script>
