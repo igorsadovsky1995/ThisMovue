@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-account">
+        <div class="info-user">
+            <div class="info-user__nickname ">
+                <div class="info-user__nickname__body">
+                    <input  type="text" id="nickname" name="nickname" value="Nickname"/>
+                    <div id="rewrite">
+                        
+                    </div>
+                    <button id="save">
+                        save
+                    </button>
+                </div>
+            </div>
+            <div class="info-user__time-played">
+                <h3>
+                    Time played: 2 mounth
+                </h3>
+            </div>
+        </div>
+        <div class="achievements">
+            <h3>
+                Achievements
+            </h3>
+            <div class="achievements__images">
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div><div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+                <div class="achievements__image">
+                    <img src="img/pageAccount/sq.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="statistics">
+            <h3>
+                Statistics
+            </h3>
+            <span>
+                Movies guessed: 20
+            </span>
+            <span>
+                Total games: 50
+            </span>
+            <span>
+                Total views: 555
+            </span>
+        </div>
+        <div class="change" id="passwordChange">
+            <h3>
+                Change your password
+            </h3>
+        </div>
+    </div>
+
+    <div class="popup-password">
+        <div class="popup-password__body">
+            <form action="">
+                <label for="">
+                    <input type="text">
+                    <span>
+                        Enter old password
+                    </span>
+                </label>
+                <label for="">
+                    <input type="text">
+                    <span>
+                        Enter new password
+                    </span>
+                </label>
+                <label for="">
+                    <input type="text">
+                    <span>
+                        Confirmation
+                    </span>
+                </label>
+                <button id="savePassword">
+                    Save
+                </button>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#rewrite').click(()=>{
+            $('#nickname').focus();
+            
+        })
+        $('#nickname').focus(()=>{
+            $('#rewrite').hide();
+            $('#save').show();
+            $('.info-user__nickname').addClass('open')
+        })
+        $('#nickname').focusout(()=>{
+            $('#rewrite').show();
+            $('#save').hide();
+            $('.info-user__nickname').removeClass('open')
+        })
+        $('#passwordChange').click(()=>{
+            $('.popup-password').addClass('open')
+        })
+
+        $('#savePassword').click(()=>{
+            $('.popup-password').removeClass('open')
+        })
+    </script>
+</html>

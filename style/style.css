@@ -792,4 +792,550 @@ body {
             transform: translateX(0%);
   }
 }
+
+/*----------------------- PAGE-ACCOUNT --------------------------*/
+.page-account {
+  padding: 2.1875rem 1.25rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+  background: #000;
+}
+
+.page-account h3,
+.change a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+}
+
+.change h3 {
+  margin: 0;
+}
+
+.info-user {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+  padding: 2rem 1.25rem;
+}
+
+.info-user h3 {
+  margin: 0;
+}
+
+.info-user__nickname {
+  position: relative;
+}
+
+.info-user__nickname__body {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.info-user__nickname input {
+  outline-style: none;
+  width: 40%;
+  border: none;
+  background: none;
+  line-height: 120%;
+  font-family: 'Lalezar';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.2rem;
+  height: 5.2rem;
+  color: #FFFFFF;
+  border-bottom: #FFFFFF solid 3px;
+  padding: 0;
+  margin: 0 0 0.625rem 0;
+}
+
+.info-user__nickname #rewrite {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  border: none;
+  background: url("../img/pageAccount/pen.svg");
+  background-position: -2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 2rem;
+  width: 2rem;
+}
+
+.info-user__nickname img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.achievements {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 0.625rem);
+          flex: 0 1 calc(50% - 0.625rem);
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+}
+
+.achievements h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.achievements h3::after {
+  content: "";
+  background-image: url("../img/pageAccount/medal.svg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transform: translate(105%, 0);
+          transform: translate(105%, 0);
+}
+
+#save {
+  cursor: pointer;
+  display: none;
+  padding: 1.25rem;
+  border: none;
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.achievements__images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.25rem;
+}
+
+.achievements__image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.achievements__image img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.statistics {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 0.625rem);
+          flex: 0 1 calc(50% - 0.625rem);
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+  padding: 1.25rem;
+}
+
+.statistics h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.statistics h3::after {
+  content: "";
+  background-image: url("../img/pageAccount/trend.svg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transform: translate(120%, 0);
+          transform: translate(120%, 0);
+}
+
+.statistics span {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.statistics span:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.change {
+  cursor: pointer;
+  padding: 1.25rem;
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+}
+
+.change a {
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .info-user__nickname input {
+    width: 60%;
+  }
+  .info-user__nickname #rewrite {
+    left: 60%;
+  }
+  .info-user {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+    padding: 2rem 1.25rem;
+  }
+  .statistics {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+    padding: 1.25rem;
+  }
+  .achievements {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+    padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  }
+  .change {
+    padding: 1.25rem;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+  }
+  .achievements__image {
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-account {
+    padding: 20px;
+  }
+  .info-user__nickname #rewrite {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    -webkit-transform: translate(-70%, 25%);
+            transform: translate(-70%, 25%);
+  }
+  .info-user__nickname__body {
+    padding-bottom: 20px;
+  }
+  .info-user__nickname input {
+    width: calc(100% - 40px);
+    font-size: 36px;
+    height: 45px;
+    margin-bottom: 0;
+  }
+  .info-user__nickname.open input {
+    width: 100%;
+  }
+  .page-account h3,
+  .change h3 {
+    font-size: 24px;
+  }
+  #save {
+    width: 100%;
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .info-user {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .statistics {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .achievements {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .change {
+    padding: 1.25rem;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5px;
+  }
+  .achievements__images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.25rem;
+  }
+  .achievements__image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .achievements h3::after {
+    content: "";
+    background-image: url("../img/pageAccount/medal.svg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    -webkit-transform: translate(105%, 0);
+            transform: translate(105%, 0);
+  }
+  .statistics h3::after {
+    content: "";
+    background-image: url("../img/pageAccount/trend.svg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    -webkit-transform: translate(120%, 0);
+            transform: translate(120%, 0);
+  }
+}
+
+.popup-password {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.popup-password.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-password form {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.popup-password.open form {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.popup-password__body span,
+.popup-password__body input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.popup-password__body {
+  position: relative;
+  width: 67.84rem;
+  height: calc(100% - 5.28rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-password__body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.popup-password__body label {
+  display: inline-block;
+  width: 52.8rem;
+}
+
+.popup-password__body label:not(:first-child) {
+  margin-top: 2.1875rem;
+}
+
+.popup-password__body input {
+  width: calc(50% - 0.625rem);
+  height: 3.5rem;
+  margin-right: 1.25rem;
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+  border: none;
+}
+
+.popup-password__body button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 120%;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.875rem 1.25rem;
+}
+
+@media (max-width: 1200px) {
+  .popup-password__body {
+    width: calc(100% - 80px);
+  }
+  .popup-password__body label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .popup-password {
+    overflow: scroll;
+    display: block;
+  }
+  .popup-password__body {
+    position: static;
+    min-height: 550px;
+    height: 100%;
+    margin: auto;
+  }
+  .popup-password__body form {
+    overflow: scroll;
+  }
+  .popup-password__body input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .popup-password__body button {
+    position: relative;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 50px;
+  }
+  .popup-password__body form {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-password {
+    overflow: scroll;
+    display: block;
+  }
+  .popup-password__body input {
+    height: 48px;
+  }
+  .popup-password__body {
+    position: static;
+    min-height: 450px;
+    height: 100%;
+    margin: auto;
+  }
+  .popup-password__body form {
+    overflow: scroll;
+  }
+  .popup-password__body span,
+  .popup-password__body input {
+    font-size: 24px;
+    margin-right: 0;
+  }
+  .popup-password__body button {
+    position: relative;
+    font-size: 24px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 50px;
+  }
+  .popup-password__body {
+    width: calc(100% - 40px);
+  }
+}
 /*# sourceMappingURL=style.css.map */

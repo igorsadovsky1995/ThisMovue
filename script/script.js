@@ -63,8 +63,6 @@ $(document).ready(function(){
         $('.leng-setting__item').eq(array.lang).addClass('active')
         
     })
-   
 
-   
 })
 
