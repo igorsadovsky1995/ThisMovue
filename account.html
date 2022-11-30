@@ -13,12 +13,11 @@
         <div class="info-user">
             <div class="info-user__nickname ">
                 <div class="info-user__nickname__body">
-                    <input  type="text" id="nickname" name="nickname" value="Nickname"/>
+                    <input type="text" id="nickname" name="nickname" value="Nickname"/>
                     <div id="rewrite">
-                        
                     </div>
                     <button id="save">
-                        save
+                        Save
                     </button>
                 </div>
             </div>
@@ -133,17 +132,14 @@
                 <button id="savePassword">
                     Save
                 </button>
-            </form>
-            
+            </form> 
         </div>
     </div>
-
 
     <script src="script/jquery-3.6.0.min.js"></script>
     <script>
         $('#rewrite').click(()=>{
             $('#nickname').focus();
-            
         })
         $('#nickname').focus(()=>{
             $('#rewrite').hide();
@@ -158,7 +154,6 @@
         $('#passwordChange').click(()=>{
             $('.popup-password').addClass('open')
         })
-
         $('#savePassword').click(()=>{
             $('.popup-password').removeClass('open')
         })
