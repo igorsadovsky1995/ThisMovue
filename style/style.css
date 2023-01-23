@@ -806,6 +806,15 @@ body {
   background: #000;
 }
 
+.arrow-back {
+  margin-bottom: 1rem;
+}
+
+.arrow-back img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .page-account h3,
 .change a {
   font-style: normal;
@@ -826,7 +835,13 @@ body {
           flex: 1 1 100%;
   background: rgba(217, 217, 217, 0.2);
   border-radius: 5px;
-  padding: 2rem 1.25rem;
+  padding: 1.875rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .info-user h3 {
@@ -835,6 +850,9 @@ body {
 
 .info-user__nickname {
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .info-user__nickname__body {
@@ -845,7 +863,7 @@ body {
 
 .info-user__nickname input {
   outline-style: none;
-  width: 40%;
+  width: 70%;
   border: none;
   background: none;
   line-height: 120%;
@@ -857,14 +875,13 @@ body {
   color: #FFFFFF;
   border-bottom: #FFFFFF solid 3px;
   padding: 0;
-  margin: 0 0 0.625rem 0;
 }
 
 .info-user__nickname #rewrite {
   cursor: pointer;
   position: absolute;
   top: 0;
-  left: 40%;
+  left: 70%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   border: none;
@@ -885,14 +902,30 @@ body {
   overflow: hidden;
 }
 
+.info-user__time-played {
+  margin-top: auto;
+}
+
 .achievements {
   position: relative;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(50% - 0.625rem);
-          flex: 0 1 calc(50% - 0.625rem);
+      -ms-flex: 0 1 calc(65% - 0.625rem);
+          flex: 0 1 calc(65% - 0.625rem);
   background: rgba(217, 217, 217, 0.2);
   border-radius: 5px;
-  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  overflow: auto;
+  padding: 1.25rem 2.5rem 1.25rem 1.25rem;
+  max-height: 22.2rem;
+  scrollbar-color: rgba(217, 217, 217, 0.2) transparent;
+}
+
+.achievements::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.achievements::-webkit-scrollbar-thumb {
+  position: relative;
+  background: rgba(217, 217, 217, 0.2);
 }
 
 .achievements h3 {
@@ -931,8 +964,8 @@ body {
 .achievements__images {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
   grid-gap: 1.25rem;
 }
 
@@ -955,8 +988,8 @@ body {
 .statistics {
   position: relative;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(50% - 0.625rem);
-          flex: 0 1 calc(50% - 0.625rem);
+      -ms-flex: 0 1 calc(35% - 0.625rem);
+          flex: 0 1 calc(35% - 0.625rem);
   background: rgba(217, 217, 217, 0.2);
   border-radius: 5px;
   padding: 1.25rem;
@@ -1008,17 +1041,27 @@ body {
 @media (max-width: 992px) {
   .info-user__nickname input {
     width: 60%;
+    margin: 0 0 0.625rem 0;
   }
   .info-user__nickname #rewrite {
     left: 60%;
   }
   .info-user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     background: rgba(217, 217, 217, 0.2);
     border-radius: 5px;
     padding: 2rem 1.25rem;
+  }
+  .info-user__nickname {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
   .statistics {
     -webkit-box-flex: 0;
@@ -1213,7 +1256,7 @@ body {
           justify-content: center;
 }
 
-.popup-password__body form {
+.popup-password__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1286,7 +1329,7 @@ body {
     height: 100%;
     margin: auto;
   }
-  .popup-password__body form {
+  .popup-password__form {
     overflow: scroll;
   }
   .popup-password__body input {
@@ -1300,7 +1343,7 @@ body {
         align-self: flex-end;
     margin-top: 50px;
   }
-  .popup-password__body form {
+  .popup-password__form {
     overflow: scroll;
   }
 }
@@ -1319,7 +1362,7 @@ body {
     height: 100%;
     margin: auto;
   }
-  .popup-password__body form {
+  .popup-password__form {
     overflow: scroll;
   }
   .popup-password__body span,

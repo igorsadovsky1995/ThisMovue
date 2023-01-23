@@ -664,6 +664,13 @@ body{
     gap:1.25rem;
     background: #000;
 }
+.arrow-back{
+    margin-bottom: 1rem;
+}
+.arrow-back img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
 .page-account h3,
 .change a{
     font-style: normal;
@@ -681,13 +688,16 @@ body{
     flex: 1 1 100%;
     background: rgba(217, 217, 217, 0.2);
     border-radius: 5px;
-    padding:2rem 1.25rem;
+    padding:1.875rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
 }
 .info-user h3{
     margin: 0;
 }
 .info-user__nickname {
     position: relative;
+    flex:0 1 50%;
 }
 .info-user__nickname__body{
     display: inline-block;
@@ -696,7 +706,7 @@ body{
 }
 .info-user__nickname input{
     outline-style: none;
-    width:40%;
+    width:70%;
     border: none;
     background: none;
     line-height: 120%;
@@ -708,13 +718,13 @@ body{
     color: #FFFFFF;
     border-bottom: #FFFFFF solid 3px;
     padding: 0;
-    margin: 0 0 0.625rem 0;
+    
 }
 .info-user__nickname #rewrite{
     cursor: pointer;
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 70%;
     transform: translate(50%,-50%);
     border: none;
     background: url("../img/pageAccount/pen.svg");
@@ -733,15 +743,34 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.info-user__time-played{
+    margin-top: auto;
+}
 .nickname-info-user {
 }
 
 .achievements {
     position: relative;
-    flex: 0 1 calc(50% - 0.625rem);
+    flex: 0 1 calc(65% - 0.625rem);
     background: rgba(217, 217, 217, 0.2);
     border-radius: 5px;
-    padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+    overflow: auto;
+    padding: 1.25rem 2.5rem 1.25rem 1.25rem;
+    max-height: 22.2rem;
+    scrollbar-color: rgba(217, 217, 217, 0.2) transparent;
+}
+
+  
+.achievements::-webkit-scrollbar {
+    width: 1rem;
+    //background: transparent;
+    
+    
+}
+  
+.achievements::-webkit-scrollbar-thumb {
+    position: relative;
+    background: rgba(217, 217, 217, 0.2);
 }
 .achievements h3{
     position: relative;
@@ -774,7 +803,7 @@ body{
 }
 .achievements__images {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(8,1fr);
     grid-gap: 1.25rem;
 }
 .achievements__image {
@@ -792,7 +821,7 @@ body{
 }
 .statistics {
     position: relative;
-    flex: 0 1 calc(50% - 0.625rem);
+    flex: 0 1 calc(35% - 0.625rem);
     background: rgba(217, 217, 217, 0.2);
     border-radius: 5px;
     padding: 1.25rem;
@@ -838,16 +867,21 @@ body{
 @media (max-width:992px) {
     .info-user__nickname input{
         width: 60%;
+        margin: 0 0 0.625rem 0;
     }
     .info-user__nickname #rewrite{
         left: 60%;
     }
     
     .info-user {
+        flex-direction: column;
         flex: 1 1 100%;
         background: rgba(217, 217, 217, 0.2);
         border-radius: 5px;
         padding:2rem 1.25rem;
+    }
+    .info-user__nickname{
+        flex: 0 1 100%;
     }
     .statistics {
         flex: 0 1 100%;
@@ -1011,7 +1045,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-.popup-password__body form{
+.popup-password__form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1072,7 +1106,7 @@ body{
         margin: auto;
         
     }
-    .popup-password__body form{
+    .popup-password__form{
         
         overflow: scroll;
     }
@@ -1086,7 +1120,7 @@ body{
         align-self: flex-end;
         margin-top: 50px;
     }
-    .popup-password__body form{
+    .popup-password__form{
         
         overflow: scroll;
     }
@@ -1106,7 +1140,7 @@ body{
         margin: auto;
         
     }
-    .popup-password__body form{
+    .popup-password__form{
         
         overflow: scroll;
     }
