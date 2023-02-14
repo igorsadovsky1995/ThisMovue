@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="block-password open">
+        <div class="block-password__body">
+            <div class="arrow-back">
+                <img src="img/pageAccount/arrow.svg" alt="arrow">
+            </div>
+            <div class="block-password__form valid">
+                <input class="valid-login" placeholder="Login" type="text">
+                <span class="error-login">
+                    Wrong login entered
+                </span>
+                <input class="valid-password" placeholder="Password" type="text">
+                <span class="error-password">
+                    Wrong password entered
+                </span>
+            </div> 
+            <div class="block-password__bottom">
+                <a href="#">
+                    Create new account
+                </a>
+                <button id="saveChanged">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/valitation.js"></script>
+</html>

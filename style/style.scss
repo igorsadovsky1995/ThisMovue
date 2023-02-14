@@ -1001,7 +1001,7 @@ body{
 }
 
 
-.popup-password {
+.block-password {
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -1014,152 +1014,221 @@ body{
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
+    padding: 2.5rem 2.5rem 2.5rem 3.5rem;
 }
-.popup-password.open{
+.block-password.open{
     opacity: 1;
     visibility: visible;
 }
-.popup-password form{
+.block-password form{
     opacity: 0;
     transform: translateY(-100%);
     transition: all 0.7s;
 }
-.popup-password.open form{
+.block-password.open form{
     opacity: 1;
     transform: translateY(0);
 }
-.popup-password__body span,
-.popup-password__body input{
+.block-password__body span,
+.block-password__body input{
     font-style: normal;
     font-weight: 400;
     font-size: 2.5rem;
     line-height: 120%;
     color: #FFFFFF;
-}
-    
-.popup-password__body{
-    position: relative;
-    width: 67.84rem;
-    height: calc(100% - 5.28rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.popup-password__form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-.popup-password__body label{
-    display: inline-block;
-    width: 52.8rem;
-}
-.popup-password__body label:not(:first-child){
-    margin-top:2.1875rem ;
-}
-.popup-password__body input{
-    width: calc(50% - 0.625rem);
-    height: 3.5rem;
-    margin-right: 1.25rem;
-    background: rgba(217, 217, 217, 0.2);
-    border-radius: 5px;
-    border: none;
-}
-.popup-password__body button{
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: block;
-    background: rgba(217, 217, 217, 0.2);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5rem;
-    line-height: 120%;
-    color: #FFFFFF;
-    border: none;
-    padding:0.875rem 1.25rem;
+    margin-bottom: 0;
 }
 
+.block-password__body{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.block-password__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.block-password__body input{
+    
+    display: inline-block;
+    
+}
+.block-password__body input{
+    outline: none;
+    transition: all 0.5s;
+}
+.block-password__body input::placeholder{
+    font-size: 1.5rem;
+}
+.block-password__body input:focus{
+    box-shadow: 0px 13px 12px -10px #FFFFFF80;
+    border-bottom: #fff 3px solid;
+}
+
+.block-password__body input:not(:first-child){
+    margin-top: 1.25rem;
+}
+.arrow-back{
+    cursor: pointer;
+}
+.block-password__body input{
+    width: 25.40rem;
+    height: 3.5rem;
+    border-bottom: rgba(250, 250, 250, 0.75) 3px solid;
+    background: transparent;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+.block-password__body button{
+    cursor: pointer;
+    margin-left: auto;
+    display: inline-block;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    border-radius: 0.625rem;
+    color: #FFFFFF;
+    padding:0.625rem 1.25rem;
+}
+.block-password__body button:hover{
+    background: #fff;
+    color: #363636;
+}
+span.error-againPassword,
+span.error-login,
+span.error-conf,
+span.error-password{
+    display: none;
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-top: 0.625rem;
+    line-height: 100%;
+    color: #CC3939;
+}
+.error-login.active,
+span.error-againPassword.active,
+.error-password.active{
+    display: block;
+    width: 25.4rem;
+}
+.block-password__body input.error{
+    border-bottom: #CC3939 3px solid;
+}
+.block-password__body input.error:focus{
+    box-shadow: 0px 13px 12px -10px #CC3939;
+}
+.block-password__bottom{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.block-password__bottom button{
+    align-self: end;
+}
+.block-password__bottom a{
+    margin-top: auto;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+}
 @media (max-width:1200px) {
-    .popup-password__body{
-        width: calc(100% - 80px);
+    .block-password__body{
+       
     } 
-    .popup-password__body label{
-        width: 100%;
+    .block-password__body input{
+        margin-left: 180px;
+        display: inline-block;
+        
     }
 }
 
 @media (max-width:992px) {
-    .popup-password{
+    
+    .block-password{
         overflow: scroll;
         display: block;
+        padding: 40px;
     }
-    .popup-password__body{
-        position: static;
-        min-height: 550px;
-        height: 100%;
-        margin: auto;
-        
-    }
-    .popup-password__form{
+    .block-password__form{
         
         overflow: scroll;
     }
-    .popup-password__body input{
-        width: 100%;
-        margin-bottom: 10px;
+    .block-password__body input{
+        display: block;
+        max-width: 767px;
+        margin-left: 0;
+    }
+    .block-password__body input{
         margin-right: 0;
     }
-    .popup-password__body button{
-        position: relative;
-        align-self: flex-end;
-        margin-top: 50px;
+    .block-password__body button{
+   
     }
-    .popup-password__form{
-        
+    .block-password__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         overflow: scroll;
     }
 }
 @media (max-width:767px) {
-    .popup-password{
+    .error-login.active, 
+    span.error-againPassword.active, 
+    .error-password.active{
+        width: 100%;
+        font-size: 18px;
+    }
+    .block-password__body button{
+        width:100%;
+    }
+    .block-password__bottom{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .block-password{
         overflow: scroll;
         display: block;
     }
-    .popup-password__body input{
-        height: 48px;
+    .block-password__body input{
+        width:100%;
+        margin-left: 0;
     }
-    .popup-password__body{
-        position: static;
-        min-height: 450px;
-        height: 100%;
-        margin: auto;
-        
-    }
-    .popup-password__form{
-        
-        overflow: scroll;
-    }
-    .popup-password__body span,
-    .popup-password__body input{
+    .block-password__body span,
+    .block-password__body input{
         font-size: 24px;
         margin-right: 0;
     }
-    .popup-password__body button{
-        position: relative;
-        font-size: 24px;
-        align-self: flex-end;
-        margin-top: 50px;
+    .block-password__body button{
+  
     }
-    .popup-password__body{
-        width: calc(100% - 40px);
+    .block-password__body{
+     
     } 
+    .block-password__body button{
+        font-size: 24px;
+        padding: 15px 30px;
+    }
 }
-
+@media (max-width:560px) {
+    .block-password{
+        padding: 30px 20px;
+    }
+    .block-password__body button{
+        font-size: 25px;
+        padding: 10px 20px;
+    }
+}
 
 /*--------------------- SCORES PAGE ----------------------------*/
 .wrapper.high-scores{

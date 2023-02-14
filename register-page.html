@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="block-password open">
+        <div class="block-password__body">
+            <div class="arrow-back">
+                <img src="img/pageAccount/arrow.svg" alt="arrow">
+            </div>
+            <div class="block-password__form valid">
+                <input class="valid-login" placeholder="Login" type="text">
+                <span class="error-login">
+                    Login must be longer than 3 characters
+                </span>
+                <input class="valid-password" placeholder="Password" id="newPassword" type="text">
+                <span class="error-password">
+                    The password must have at least one or more uppercase letter, lowercase letter, number, and symbol
+                </span>
+                <input class="valid-password" placeholder="Password again" id="againPassword" type="text">
+                <span class="error-againPassword">
+                    Password doesn't match
+                </span>
+            </div> 
+            <div class="block-password__bottom">
+                <a href="#">
+                    Already has accoun? LogIn
+                </a>
+                <button id="saveChanged">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/valitation.js"></script>
+</html>
