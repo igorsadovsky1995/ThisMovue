@@ -15,9 +15,9 @@
                 <img src="img/pageAccount/arrow.svg" alt="arrow">
             </a>
         </div>
-        <div class="info-user-form">
-            <div class="info-user-form__nickname ">
-                <div class="info-user-form__nickname__body">
+        <div class="info-user">
+            <div class="info-user__nickname ">
+                <div class="info-user__nickname__body">
                     <input type="text" id="nickname" name="nickname" value="Nickname"/>
                     <div id="rewrite">
                     </div>
@@ -26,7 +26,7 @@
                     </button>
                 </div>
             </div>
-            <div class="info-user-form__time-played">
+            <div class="info-user__time-played">
                 <h3>
                     Time played: 2 mounth
                 </h3>
@@ -174,6 +174,7 @@
                     </button>
                 </div>
             </form> 
+            
         </div>
     </div>
 
@@ -186,12 +187,12 @@
         $('#nickname').focus(()=>{
             $('#rewrite').hide();
             $('#save').show();
-            $('.info-user-form__nickname').addClass('open')
+            $('.info-user__nickname').addClass('open')
         })
         $('#nickname').focusout(()=>{
             $('#rewrite').show();
             $('#save').hide();
-            $('.info-user-form__nickname').removeClass('open')
+            $('.info-user__nickname').removeClass('open')
         })
         $('#passwordChange').click(()=>{
             $('.user-form').addClass('open')
