@@ -9,14 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="block-password open">
-        <div class="block-password__body">
+    <div class="user-form open">
+        <div class="user-form__body">
             <div class="arrow-back">
                 <a href="javascript:history.back()">
                     <img src="img/pageAccount/arrow.svg" alt="arrow">
                 </a>
             </div>
-            <form class="block-password__form valid">
+            <form class="user-form__form valid padding-sm">
                 <input class="valid-login" placeholder="Login" type="text">
                 <span class="error-login">
                     Login must be longer than 3 characters
@@ -29,15 +29,15 @@
                 <span class="error-againPassword">
                     Password doesn't match
                 </span>
+                <div class="user-form__bottom">
+                    <a href="#">
+                        Already has accoun? LogIn
+                    </a>
+                    <button class="button-pos-right" id="saveChanged">
+                        Save
+                    </button>
+                </div>
             </form> 
-            <div class="block-password__bottom">
-                <a href="#">
-                    Already has accoun? LogIn
-                </a>
-                <button id="saveChanged">
-                    Save
-                </button>
-            </div>
         </div>
     </div>
 
