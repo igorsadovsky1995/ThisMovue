@@ -9,31 +9,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="block-password open">
-        <div class="block-password__body">
+    <div class="user-form open">
+        <div class="user-form__body">
             <div class="arrow-back">
-                <a href="javascript:history.back()">
+                <a href="/">
                     <img src="img/pageAccount/arrow.svg" alt="arrow">
                 </a>
             </div>
-            <form class="block-password__form valid">
-                <input class="valid-login" placeholder="Login" type="text">
+            <form class="user-form__form padding-lg">
+                <input data-error="error-login" class="valid-login" placeholder="Login" type="text">
                 <span class="error-login">
                     Wrong login entered
                 </span>
-                <input class="valid-password" placeholder="Password" type="text">
+                <input data-error="error-password" class="valid-password" placeholder="Password" type="password">
                 <span class="error-password">
                     Wrong password entered
                 </span>
+                <div class="user-form__bottom">
+                    <a href="register-page.html">
+                        Create new account
+                    </a>
+                    <div class="user-form__checkbox">
+                        <input type="checkbox">
+                        <label for="">
+                            Remember me
+                        </label>
+                    </div>
+                    <button id="saveChanged">
+                        Login
+                    </button>
+                </div>
             </form> 
-            <div class="block-password__bottom">
-                <a href="#">
-                    Create new account
-                </a>
-                <button id="saveChanged">
-                    Save
-                </button>
-            </div>
+            
         </div>
     </div>
 

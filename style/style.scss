@@ -1001,7 +1001,7 @@ body{
 }
 
 
-.block-password {
+.user-form {
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -1014,95 +1014,101 @@ body{
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
-    padding: 2.5rem 2.5rem 2.5rem 3.5rem;
+    padding: 2.5rem 2.5rem 0 3.5rem;
 }
-.block-password.open{
+.user-form.open{
     opacity: 1;
     visibility: visible;
+
 }
-.block-password form{
+.user-form form{
     opacity: 0;
     transform: translateY(-100%);
     transition: all 0.7s;
 }
-.block-password.open form{
+.user-form.open form{
     opacity: 1;
     transform: translateY(0);
+    padding-bottom: 6rem;
+    min-height: max-content;
 }
-.block-password__body span,
-.block-password__body input{
+.user-form__body span,
+.user-form__body input{
     font-style: normal;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     line-height: 120%;
     color: #FFFFFF;
     margin-bottom: 0;
 }
 
-.block-password__body{
+.user-form__body{
    width: 100%;
-   height: 100%;
+   min-height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
 }
-.block-password__form{
+.user-form__form{
+    position: relative;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
 }
-.block-password__body input{
+.user-form__body input{
     
     display: inline-block;
     
 }
-.block-password__body input{
+.user-form__body input{
     outline: none;
     transition: all 0.5s;
 }
-.block-password__body input::placeholder{
-    font-size: 1.5rem;
+.user-form__body input::placeholder{
+    font-size: 1.25rem;
 }
-.block-password__body input:focus{
+.user-form__body input:focus{
     box-shadow: 0px 13px 12px -10px #FFFFFF80;
     border-bottom: #fff 3px solid;
 }
 
-.block-password__body input:not(:first-child){
+.user-form__body input:not(:first-child){
     margin-top: 1.25rem;
 }
 .arrow-back{
     cursor: pointer;
 }
-.block-password__body input{
+.user-form__body input{
     width: 25.40rem;
-    height: 3.5rem;
+    height: 2.5rem;
     border-bottom: rgba(250, 250, 250, 0.75) 3px solid;
     background: transparent;
     border-left: none;
     border-top: none;
     border-right: none;
 }
-.block-password__body button{
+.user-form__body button{
     cursor: pointer;
-    margin-left: auto;
+    margin-left: 2.5rem;
     display: inline-block;
     border: 2px solid #fff;
     background: transparent;
     border-radius: 5px;
     font-style: normal;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 120%;
     border-radius: 0.625rem;
     color: #FFFFFF;
     padding:0.625rem 1.25rem;
 }
-.block-password__body button:hover{
+.user-form__body button:hover{
     background: #fff;
     color: #363636;
 }
+span.error-email,
 span.error-againPassword,
 span.error-login,
 span.error-conf,
@@ -1115,67 +1121,115 @@ span.error-password{
     margin-top: 0.625rem;
     line-height: 100%;
     color: #CC3939;
+    width: 25.4rem;
+    text-align: left;
 }
+span.error-conf.active,
+span.error-login.active,
+span.error-email.active,
 .error-login.active,
 span.error-againPassword.active,
 .error-password.active{
     display: block;
-    width: 25.4rem;
 }
-.block-password__body input.error{
+.user-form__body input.error{
     border-bottom: #CC3939 3px solid;
 }
-.block-password__body input.error:focus{
+.user-form__body input.error:focus{
     box-shadow: 0px 13px 12px -10px #CC3939;
 }
-.block-password__bottom{
+.user-form__bottom{
+    position: absolute;
+    bottom: 0;
     width:100%;
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 2.5rem;
 }
-.block-password__bottom button{
+button.button-pos-right{
+    margin-left: auto;
+}
+.user-form__bottom button{
     align-self: end;
 }
-.block-password__bottom a{
-    margin-top: auto;
-    font-size: 1.25rem;
+.user-form__bottom a{
+    margin: auto 0;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
 }
+
 @media (max-width:1200px) {
-    .block-password__body{
+    .user-form__body{
        
     } 
-    .block-password__body input{
-        margin-left: 180px;
+    .user-form__body input{
         display: inline-block;
         
     }
 }
-
+.user-form__checkbox{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-left: auto;
+}
+.user-form__checkbox label{
+    font-size: 1.25rem;
+}
+.user-form__checkbox input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+.user-form__checkbox input:focus {
+    box-shadow: none;
+    border: none;
+}
+.user-form__checkbox input:checked {
+   position: relative;
+   width: 1.5rem;
+   height: 1.5rem;
+}
+.user-form__checkbox input:checked:before {
+    content:"";
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 0.125rem;
+    left: 0.125rem;
+    background: #000;
+}
 @media (max-width:992px) {
     
-    .block-password{
+    .user-form{
         overflow: scroll;
         display: block;
-        padding: 40px;
+        padding: 40px 40px 0 40px;
     }
-    .block-password__form{
+    .user-form__bottom{
+        margin-bottom: 40px;
+    }
+    .user-form__form{
         
         overflow: scroll;
     }
-    .block-password__body input{
+    .user-form__body input{
         display: block;
         max-width: 767px;
         margin-left: 0;
     }
-    .block-password__body input{
+    .user-form__body input{
         margin-right: 0;
     }
-    .block-password__body button{
+    .user-form__body button{
    
     }
-    .block-password__form{
+    .user-form__form{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1183,50 +1237,101 @@ span.error-againPassword.active,
     }
 }
 @media (max-width:767px) {
-    .error-login.active, 
-    span.error-againPassword.active, 
+    
+    span.error-conf.active,
+    span.error-login.active,
+    span.error-email.active,
+    .error-login.active,
+    span.error-againPassword.active,
     .error-password.active{
         width: 100%;
         font-size: 18px;
     }
-    .block-password__body button{
+    .user-form__body button{
         width:100%;
     }
-    .block-password__bottom{
+    .user-form__bottom{
         flex-direction: column;
         gap: 20px;
     }
-    .block-password{
+    .user-form{
         overflow: scroll;
         display: block;
     }
-    .block-password__body input{
+    .user-form__body input{
         width:100%;
         margin-left: 0;
     }
-    .block-password__body span,
-    .block-password__body input{
+    .user-form__body span,
+    .user-form__body input{
         font-size: 24px;
         margin-right: 0;
     }
-    .block-password__body button{
+    .user-form__body button{
   
     }
-    .block-password__body{
+    .user-form__body{
      
     } 
-    .block-password__body button{
+    .user-form__body button{
         font-size: 24px;
         padding: 15px 30px;
     }
+    .user-form__checkbox {
+        margin: 0;
+    }
+    .user-form__checkbox input{
+       
+    }
+    .user-form__checkbox input:focus{
+        box-shadow: none;
+        border: none;
+    }
+    .user-form__checkbox input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #fff;
+        height: 20px;
+        width: 20px;
+        border: none;
+    }
+    .user-form__checkbox input:checked {
+        position: relative;
+        height: 20px;
+        width: 20px;
+    }
+    .user-form__checkbox input:checked:before {
+        content:"";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+        background: #000;
+    }
+    
+    .user-form__checkbox input{
+        width: 20px;
+        height: 20px;
+    }
+    .user-form.open form.padding-lg{
+        padding-bottom: 220px;
+    }
+    .user-form.open form.padding-sm{
+        padding-bottom: 180px;
+    }
 }
 @media (max-width:560px) {
-    .block-password{
-        padding: 30px 20px;
+    .user-form{
+        padding: 30px 20px 0 30px;
     }
-    .block-password__body button{
+    .user-form__body button{
         font-size: 25px;
         padding: 10px 20px;
+    }
+    .user-form__bottom{
+        margin-bottom: 30px;
     }
 }
 

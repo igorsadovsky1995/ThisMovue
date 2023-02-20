@@ -11,7 +11,7 @@
 <body>
     <div class="page-account">
         <div class="arrow-back">
-            <a href="javascript:history.back()">
+            <a href="/">
                 <img src="img/pageAccount/arrow.svg" alt="arrow">
             </a>
         </div>
@@ -150,30 +150,31 @@
         </div>
     </div>
 
-    <div class="block-password">
-        <div class="block-password__body">
+    <div class="user-form">
+        <div class="user-form__body">
             <div class="arrow-back">
                 <img src="img/pageAccount/arrow.svg" alt="arrow">
             </div>
-            <form class="block-password__form valid">
-                <input class="valid-password" placeholder="Enter old password" type="text">
+            <form class="user-form__form">
+                <input data-error="error-password" class="valid-password" placeholder="Enter old password" type="password">
                 <span class="error-password">
                     Wrong password entered
                 </span>
-                <input id="newPassword" class="valid-password" placeholder="Enter new password" type="text">
-                <span class="error-password">
+                <input data-error="error-againPassword" id="newPassword" class="valid-password" placeholder="Enter new password" type="password">
+                <span class="error-againPassword">
                     Wrong password entered
                 </span>
-                <input  placeholder="Confirmation" type="text"> 
+                <input data-error="error-conf" placeholder="Confirmation" type="text"> 
                 <span class="error-conf">
                     Differs from the previously entered password
                 </span>
+                <div class="user-form__bottom">
+                    <button id="saveChanged">
+                        Save
+                    </button>
+                </div>
             </form> 
-            <div class="block-password__bottom">
-                <button id="saveChanged">
-                    Save
-                </button>
-            </div>
+            
         </div>
     </div>
 
@@ -194,11 +195,11 @@
             $('.info-user__nickname').removeClass('open')
         })
         $('#passwordChange').click(()=>{
-            $('.block-password').addClass('open')
+            $('.user-form').addClass('open')
         })
 
-        $('.block-password__body .arrow-back').click(()=>{
-            $('.block-password').removeClass('open')
+        $('.user-form__body .arrow-back').click(()=>{
+            $('.user-form').removeClass('open')
         })
     </script>
 </html>
