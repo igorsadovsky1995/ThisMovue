@@ -1045,7 +1045,7 @@ body {
 .user-form.open form {
   opacity: 1;
   transform: translateY(0);
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   min-height: max-content;
 }
 
@@ -1053,7 +1053,7 @@ body {
 .user-form__body input {
   font-style: normal;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #FFFFFF;
   margin-bottom: 0;
@@ -1086,7 +1086,7 @@ body {
 }
 
 .user-form__body input::placeholder {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .user-form__body input:focus {
@@ -1104,7 +1104,7 @@ body {
 
 .user-form__body input {
   width: 25.40rem;
-  height: 3.5rem;
+  height: 2.5rem;
   border-bottom: rgba(250, 250, 250, 0.75) 3px solid;
   background: transparent;
   border-left: none;
@@ -1121,7 +1121,7 @@ body {
   border-radius: 5px;
   font-style: normal;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 120%;
   border-radius: 0.625rem;
   color: #FFFFFF;
@@ -1133,6 +1133,7 @@ body {
   color: #363636;
 }
 
+span.error-email,
 span.error-againPassword,
 span.error-login,
 span.error-conf,
@@ -1145,13 +1146,17 @@ span.error-password {
   margin-top: 0.625rem;
   line-height: 100%;
   color: #CC3939;
+  width: 25.4rem;
+  text-align: left;
 }
 
+span.error-conf.active,
+span.error-login.active,
+span.error-email.active,
 .error-login.active,
 span.error-againPassword.active,
 .error-password.active {
   display: block;
-  width: 25.4rem;
 }
 
 .user-form__body input.error {
@@ -1180,7 +1185,7 @@ button.button-pos-right {
 
 .user-form__bottom a {
   margin: auto 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
 }
@@ -1263,6 +1268,9 @@ button.button-pos-right {
 }
 
 @media (max-width: 767px) {
+  span.error-conf.active,
+  span.error-login.active,
+  span.error-email.active,
   .error-login.active,
   span.error-againPassword.active,
   .error-password.active {
